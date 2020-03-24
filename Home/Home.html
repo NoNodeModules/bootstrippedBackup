@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS Interno! -->
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/compiler/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/compiler/style.css"
+    />
+
+    <!-- align content at right using @media -->
+    <!-- search button tem que receber classe ml=0 quando px max width 992px tem que receber um max width para não quebrar o butão. -->
+    <!-- icone de lupa no searchbar! -->
+    <style>
+      #firstnavbar {
+        color: black;
+        z-index: 9998;
+      }
+      #secondnavbar {
+        box-shadow: 0.5em 0.5em 1.25em rgba(0, 0, 0, 0.103);
+        border: 0ch;
+        z-index: 9999;
+      }
+      /* .nav-link {
+        color: aqua;
+      } */
+      .nav-link:hover {
+        font-weight: 499;
+      }
+      .nav-item:hover {
+        background-color: rgba(115, 211, 222, 0.753);
+        transition-duration: 0.5s;
+        border-radius: 0.5em;
+      }
+      .dropdown-menu {
+        background-color: rgb(255, 255, 255);
+        border: 0ch;
+      }
+      #searchbar {
+        margin-left: 1em;
+      }
+      #upperimage {
+        max-width: 100%;
+      }
+      /* media query para redim */
+      .home-quadrado1 {
+        width: 49%;
+        height: 38.625em;
+        background: #73d3de;
+        box-shadow: gray 1px 10px 20px;
+        margin-top: 1.25em;
+        margin-left: 4%;
+        float: left;
+      }
+      .home-quadrado2 {
+        width: 49%;
+        height: 38.625em;
+        background: #54deb2;
+        margin-top: 3.25em;
+        float: right;
+        box-shadow: gray -10px 8px 20px;
+        margin-right: 4%;
+      }
+      #imagem-urso-leao {
+        float: right;
+        max-width: 100%;
+        max-height: 38.5em;
+        margin-top: 1.25em;
+        padding-right: 5%;
+      }
+      #imagem-zebra {
+        margin-top: 1.25em;
+        max-width: 40%;
+        padding-left: 0%;
+      }
+      footer {
+        width: 100%;
+        height: 11.25em;
+        clear: both;
+        margin-top: 3%;
+        box-shadow: #00000029 0px -10px 20px;
+      }
+      @media (max-width: 992px) {
+        #searchbar {
+          margin-left: 0em;
+          max-width: 200px;
+          margin-top: 0.625em;
+        }
+        #searchbutton {
+          margin-top: 0.625em;
+        }
+        li {
+          text-align: left;
+          padding-left: 0.3em;
+        }
+        /* separando botões */
+        .dropdown-menu {
+          margin-bottom: 0.325em;
+          margin-right: 0.325em;
+        }
+        /* margem primeiro item da lista */
+        #navitem1 {
+          margin-top: 0.625em;
+        }
+        /* joga o logo pro centro ao redimencionar */
+        .navbar-brand {
+          margin: 0 auto;
+        }
+        #upperimage {
+          max-width: 100%;
+
+          background-image: url("../img/criancasHome.jpg");
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          /* margin-top: 1em; */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-light">
+      <div class="container">
+        <a href="#" class="navbar-brand" id="firstnavbar">Cresci</a>
+      </div>
+    </nav>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-gradient-light"
+      id="secondnavbar"
+    >
+      <div class="container">
+        <!-- <a href="#" class="navbar-brand">Cresci</a> -->
+
+        <button
+          class="navbar-toggler mr-auto"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSite"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse mr-auto" id="navbarSite">
+          <ul class="navbar-nav">
+            <li class="nav-item" id="navitem1">
+              <a href="#" class="nav-link">Início</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Produtos</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Contato</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Doe</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Sobre Nós</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" target="_blank" class="nav-link">Dúvidas?</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-toggle="dropdown"
+                id="navdrop"
+                >Entre</a
+              >
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-item" id="dropdown-item">Entrar</a>
+                <a href="#" class="dropdown-item" id="dropdown-item"
+                  >Cadastro</a
+                >
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline">
+            <input
+              type="search"
+              class="form-control mr-2"
+              placeholder="Buscar..."
+              id="searchbar"
+            />
+            <button class="btn btn-dark" id="searchbutton" type="submit">
+              Ok
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="home-imagebox container-flex">
+      <img
+        src="../img/criancasHomecutted.jpg"
+        alt=""
+        id="upperimage"
+        class="imagem container-flex"
+      />
+    </div>
+    <main id="home-main">
+      <div class="home-quadrado1"></div>
+      <img
+        src="../img/pai_e_filha-cutted.jpg"
+        alt=""
+        id="imagem-urso-leao"
+        class="d-block"
+      />
+
+      <div class="home-quadrado2"></div>
+      <img
+        src="../img/banner-bichinhos.png"
+        alt=""
+        id="imagem-zebra"
+        class="d-block"
+      />
+    </main>
+    <footer class="bg-gradient-light">
+      <div class="container">
+        <button class="btn btn-primary">clique</button>
+      </div>
+    </footer>
+    <!-- Optional JavaScript Interno com Sass -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS  Locais!-->
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  </body>
+</html>
